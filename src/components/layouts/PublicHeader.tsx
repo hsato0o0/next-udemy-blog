@@ -1,13 +1,12 @@
 import Link from 'next/link';
 import { Button } from '../ui/button';
-import { Input } from '../ui/input';
 
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
-  NavigationMenuList,
 } from '../ui/navigation-menu';
+import SearchBox from '../post/SearchBox';
 
 export default function PublicHeader() {
   return (
@@ -26,10 +25,7 @@ export default function PublicHeader() {
             </NavigationMenuLink>
           </NavigationMenu>
           <div className="flex items-center gap-4">
-            <Input
-              placeholder="記事を検索..."
-              className="w-[200px] lg:w-[300px]"
-            />
+            <SearchBox />
             <Button variant="outline" asChild>
               <Link href="/login">ログイン</Link>
             </Button>
